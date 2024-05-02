@@ -1,0 +1,31 @@
+{
+  "name": "noticias-botucatu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.webscrapping",
+    "productName": "Noticias Botucatu",
+    "directories": {
+      "output": "build"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    }
+  },
+  "author": "Julio Rugolo",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.2",
+    "electron-builder": "^23.6.0"
+  }
+}

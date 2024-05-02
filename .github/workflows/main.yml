@@ -11,8 +11,6 @@ jobs:
     
     steps:
     - name: Checkout repository
-      with:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       uses: actions/checkout@v2
       
     - name: Set up Node.js
@@ -31,3 +29,5 @@ jobs:
       with:
         name: macOS-app
         path: dist/*.dmg
+      env:
+        token: ${{ secrets.GH_TOKEN }}

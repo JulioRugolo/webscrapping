@@ -30,4 +30,4 @@ jobs:
         name: macOS-app
         path: dist/*.dmg
       env:
-        GH_TOKEN: GH_TOKEN
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}

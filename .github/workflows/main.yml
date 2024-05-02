@@ -12,8 +12,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Set up GH_TOKEN
-      run: echo "export GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV  
+      
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
@@ -30,3 +29,5 @@ jobs:
       with:
         name: macOS-app
         path: dist/*.dmg
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
